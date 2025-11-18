@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATS Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lavanya'S-Friendly Resume Builder</h1>
+        <form id="resumeForm">
+            <label>Full Name</label>
+            <input type="text" id="name" required />
+
+            <label>Email</label>
+            <input type="email" id="email" required />
+
+            <label>Phone Number</label>
+            <input type="text" id="phone" required />
+
+            <label>LinkedIn URL</label>
+            <input type="text" id="linkedin" />
+
+            <label>Portfolio / GitHub URL</label>
+            <input type="text" id="portfolio" />
+
+            <label>Professional Summary</label>
+            <textarea id="summary" rows="4" required></textarea>
+
+            <label>Skills (comma separated)</label>
+            <textarea id="skills"></textarea>
+
+            <label>Work Experience</label>
+            <textarea id="experience" rows="4"></textarea>
+
+            <label>Projects</label>
+            <textarea id="projects" rows="4"></textarea>
+
+            <label>Education</label>
+            <textarea id="education" rows="4"></textarea>
+
+            <button type="button" onclick="generateResume()">Generate Resume</button>
+            <button type="button" onclick="downloadPDF()" style="background: green; margin-left:10px;">Download PDF</button>
+        </form>
+
+        <div id="resumeOutput" class="resume-preview"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
